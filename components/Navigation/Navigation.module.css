@@ -1,0 +1,29 @@
+.container {
+  width: 100%;
+  display: block;
+  position: relative;
+}
+
+.wrapper {
+  width: 1200px;
+  display: block;
+  margin: 0 auto;
+  position: relative;
+}
+.menu {
+    display: flex;
+    position: relative;
+    padding:0;
+    margin: 0;
+}
+.menuItem {
+    position: relative;
+    color: #646464;
+    width: 100%;
+    display: block;
+    padding: 15px 22px 15px 22px;
+    font-weight: 600;
+    text-align: center;
+    line-height: 1.2;
+    letter-spacing: -.28px;
+}
