@@ -1,5 +1,5 @@
 import Navbar from "./Navbar/Navbar"
-import Announcement from './Announcement'
+import Announcement from './Announcement/Announcement'
 import Footer from "./Footer/Footer"
 import Navigation from "./Navigation/Navigation"
 

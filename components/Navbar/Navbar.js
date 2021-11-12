@@ -2,14 +2,14 @@ import styles from "./Navbar.module.css";
 import SearchIcon from "@mui/icons-material/Search";
 import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
 import Badge from "@mui/material/Badge";
-import { style } from "@mui/system";
+import Link from "next/link";
 
 function Navbar() {
   return (
     <div className={styles.container}>
       <div className={styles.wrapper}>
         <div className={styles.left}>
-          <h1>Shoppy</h1>
+          <Link href="/"><a><h1>Shoppy</h1></a></Link>
         </div>
         <div className={styles.center}>
           <div className={styles.SearchContainer}>
@@ -29,14 +29,14 @@ function Navbar() {
           </div>
         </div>
       </div>
-    <div className={styles.colorfulBand}>
-      <div className={styles.band1}></div>
-      <div className={styles.band2}></div>
-      <div className={styles.band3}></div>
-      <div className={styles.band4}></div>
-      <div className={styles.band5}></div>
-      <div className={styles.band6}></div>
-    </div>
+      <div className={styles.colorfulBand}>
+        <div className={styles.band1}></div>
+        <div className={styles.band2}></div>
+        <div className={styles.band3}></div>
+        <div className={styles.band4}></div>
+        <div className={styles.band5}></div>
+        <div className={styles.band6}></div>
+      </div>
     </div>
   );
 }
