@@ -2,7 +2,6 @@ import Navbar from "./Navbar/Navbar"
 import Announcement from './Announcement'
 import Footer from "./Footer/Footer"
 import Navigation from "./Navigation/Navigation"
-import Slider from "./Slider"
 
 function Layout({children}) {
     return (
@@ -10,7 +9,6 @@ function Layout({children}) {
             <Announcement />
             <Navbar />
             <Navigation />
-            <Slider />
             {children}
             <Footer />
             

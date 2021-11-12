@@ -1,0 +1,13 @@
+.eachSlide {
+  height: 60vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+.image {
+  height: 60vh;
+  width: 90%;
+  background-repeat: no-repeat;
+  background-position: center;
+}
