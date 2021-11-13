@@ -2,7 +2,8 @@ import Head from "next/head";
 import Image from "next/image";
 import styles from "../styles/Home.module.css";
 import Slider from "../components/Slide/Slider";
-export default function Home() {
+import Products from "../components/Products/Products";
+export default function Home({products}) {
   return (
     <div className={styles.container}>
       <Head>
@@ -11,38 +12,21 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Slider />
-      <div className={styles.containerFluid}>
-        <div className={styles.centeredContainer}>
-          <h3 className={styles.centeredTitle}>Sıcak Fırsatlar</h3>
-          <div className={styles.titleUnderline}></div>
-        </div>
-        <div className={styles.seasonProducts}>
-          <div className={styles.seasonProduct}>a</div>
-          <div className={styles.seasonProduct}>a</div>
-          <div className={styles.seasonProduct}>a</div>
-          <div className={styles.seasonProduct}>a</div>
-          <div className={styles.seasonProduct}>a</div>
-          <div className={styles.seasonProduct}>a</div>
-          <div className={styles.seasonProduct}>a</div>
-          <div className={styles.seasonProduct}>a</div>
-          <div className={styles.seasonProduct}>a</div>
-          
-        </div>
-      </div>
+      <Products products={products}/>
     </div>
   );
 }
 export async function getStaticProps(context) {
-  const res = await fetch(`https://fakestoreapi.com/products/categories`);
-  const categories = await res.json();
-  console.log(data);
-  if (!categories) {
+  const res = await fetch(`https://fakestoreapi.com/products`);
+  const products = await res.json();
+  console.log(products);
+  if (!products) {
     return {
       notFound: true,
     };
   }
 
   return {
-    props: { categories }, // will be passed to the page component as props
+    props: { products }, // will be passed to the page component as props
   };
 }

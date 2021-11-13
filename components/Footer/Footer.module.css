@@ -1,0 +1,71 @@
+.container{
+    display: flex;
+    background-color: #fcfbf9;
+}
+.left{
+flex: 1;
+display: flex;
+flex-direction: column;
+padding: 20px;
+}
+
+.desc{
+    margin: 20px 0px;
+
+}
+
+.socialContainer{
+    display: flex;
+
+}
+.socialIcon{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 20px; 
+}
+
+.center{
+    flex: 1;
+    padding: 20px;
+}
+
+
+.title{
+    margin-bottom: 30px;
+}
+
+
+.list{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.listItem{
+    width: 50%;
+    margin-bottom: 10px;
+}
+
+
+.right{
+    flex: 1;
+    padding: 20px;
+}
+
+.contanctItem{
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+}
+
+.payment{
+    width: 50%;
+}
+
