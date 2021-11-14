@@ -19,7 +19,7 @@ import styles from './Footer.module.css'
             the majority have suffered alteration in some form, by injected
             humour, or randomised words which don’t look even slightly believable.
           </p>
-          <div classname={styles.socialContainer}>
+          <div className={styles.socialContainer}>
             <div className={styles.socialIcon} style={{ backgroundColor: "3B5999"}}>
               <FacebookIcon />
             </div>
