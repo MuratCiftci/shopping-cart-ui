@@ -1,4 +1,5 @@
 .container {
+  border-bottom: 1px solid #ebebeb;
   position: relative;
   z-index: 100;
   background-color: #fff;
