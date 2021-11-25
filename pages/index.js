@@ -18,7 +18,6 @@ export default function Home({products}) {
 export async function getStaticProps(context) {
   const res = await fetch(`https://fakestoreapi.com/products`);
   const products = await res.json();
-  console.log(products);
   if (!products) {
     return {
       notFound: true,

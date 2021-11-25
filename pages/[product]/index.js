@@ -26,7 +26,7 @@ export async function getStaticPaths() {
 
   // Get the paths we want to pre-render based on posts
   const paths = products.map((product) => ({
-    params: { category: product.category, product: product.id.toString() },
+    params: { product: product.id.toString() },
   }));
 
   // We'll pre-render only these paths at build time.

@@ -10,8 +10,7 @@ function Layout({children}) {
             <Navbar />
             <Navigation />
             {children}
-            <Footer />
-            
+            <Footer />   
         </div>
     )
 }

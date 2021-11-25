@@ -1,10 +1,13 @@
 import styles from "./Navbar.module.css";
+import {CartContext} from '../../context/CartContext'
 import SearchIcon from "@mui/icons-material/Search";
 import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
 import Badge from "@mui/material/Badge";
 import Link from "next/link";
-
+import {useContext} from 'react'
 function Navbar() {
+  const {cartItems} = useContext(CartContext);
+
   return (
     <div className={styles.container}>
       <div className={styles.wrapper}>
@@ -24,8 +27,8 @@ function Navbar() {
           <div className={styles.MenuItem}>REGISTER</div>
           <div className={styles.MenuItem}>SIGN IN</div>
           <div className={styles.MenuItem}>
-            <Badge badgeContent={4} color="primary"></Badge>
-            <ShoppingCartIcon />
+            <Badge badgeContent={cartItems.length} color="primary"></Badge>
+            <Link href="/cart"><ShoppingCartIcon /></Link>
           </div>
         </div>
       </div>

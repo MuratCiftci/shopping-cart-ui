@@ -15,6 +15,8 @@
     border: 1px solid whitesmoke !important;
 }
 .image {
+  position: relative;
+  left: 15%;
 width: 100px;
 height: 130px;
   z-index: 2;
@@ -51,7 +53,12 @@ height: 130px;
   width: 100%;
   color: #c94c1a;
 }
-.cartButton{
+.productButton{
+  outline: none;
+  border: none;
+  background-color: #fff;
+}
+.cartIcon{
   width: 2rem;
   height: 1.2em;
   cursor: pointer;
