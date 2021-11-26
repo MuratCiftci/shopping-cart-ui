@@ -1,14 +1,15 @@
 import React, { createContext, useReducer } from "react";
 import { CartReducer, sumItems } from "./CartReducer";
 import { useEffect } from "react";
-
+import { getCookie } from "../lib/useCookie";
+const cart = getCookie("cart");
 export const CartContext = createContext();
 
 
 
 const initialState = {
-  cartItems: [],
-  ...sumItems,
+  cartItems: cart,
+  ...sumItems(cart),
   checkout: false,
 };
 
@@ -16,7 +17,6 @@ const CartContextProvider = ({ children }) => {
   // Perform localStorage action
 
   const [state, dispatch] = useReducer(CartReducer, initialState);
-
   const increase = (payload) => {
     dispatch({ type: "INCREASE", payload });
   };

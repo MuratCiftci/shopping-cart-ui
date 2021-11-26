@@ -1,4 +1,7 @@
+import {  setCookie } from "../lib/useCookie";
+const cart = "cart";
 export const sumItems = (cartItems) => {
+  setCookie(cart,cartItems)
   let itemCount = cartItems.reduce(
     (total, product) => total + product.quantity,
     0
@@ -20,7 +23,6 @@ export const CartReducer = (state, action) => {
           quantity: 1,
         });
       }
-
       return {
         ...state,
         ...sumItems(state.cartItems),
