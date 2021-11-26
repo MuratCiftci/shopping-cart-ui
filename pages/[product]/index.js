@@ -1,19 +1,45 @@
 import styles from "./Product.module.css";
-
+import Link from 'next/link'
+import { useCart } from "../../hooks/useCart";
+import ShoppingBagOutlinedIcon from "@mui/icons-material/ShoppingBagOutlined";
 const ProductDetails = ({ data }) => {
+  const { addProduct, cartItems, increase } = useCart();
 
+  const isInCart = (product) => {
+    return !!cartItems.find((data) => data.id === product.id);
+  };
   return (
-    <div className={styles.wrapper}>
-      <div className={styles.imgContainer}>
-        <img className={styles.img} src={data.image} alt="" />
-      </div>
-      <div className={styles.infoContainer}>
-        <h1 className={styles.title}>{data.title}</h1>
-        <div className={styles.desc}>{data.description}</div>
-        <span className={styles.price}>£{data.price}</span>
-        <div className={styles.addContainer}>
-          <div className={styles.amountContainer}>
-            
+    <div className={styles.container}>
+      <div className={styles.wrapper}>
+        <div className={styles.image}>
+          <img src={data.image}></img>
+        </div>
+        <div className={styles.content}>
+          <div className={styles.info}>
+            <h2 className={styles.title}>{data.title}</h2>
+            <h4 className={styles.price}>${data.price}</h4>
+            <p className={styles.desc}>{data.description}</p>
+          </div>
+          <div className={styles.filters}>
+            <button className={styles.basketProduct}>
+            {isInCart(data) && (
+            <button
+              className={styles.basketProduct}
+              onClick={() => increase(data)}
+            >
+              <ShoppingBagOutlinedIcon className={styles.basketIcon} /> <span>Add More to Basket</span>
+            </button>
+          )}
+          {!isInCart(data) && (
+            <button
+              className={styles.basketProduct}
+              onClick={() => addProduct(data)}
+            >
+              {" "}
+              <ShoppingBagOutlinedIcon className={styles.basketIcon} /> <span>Add to Basket</span>
+            </button>
+          )}
+            </button>
           </div>
         </div>
       </div>
