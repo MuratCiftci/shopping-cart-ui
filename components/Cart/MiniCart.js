@@ -4,7 +4,7 @@ import Link from "next/link";
 import DeleteOutlineSharpIcon from "@mui/icons-material/DeleteOutlineSharp";
 import ShoppingBagOutlinedIcon from "@mui/icons-material/ShoppingBagOutlined";
 const MiniCart = () => {
-  const { cartItems, total } = useCart();
+  const { cartItems, total, removeProduct } = useCart();
 
   return (
     <div className={styles.container}>
