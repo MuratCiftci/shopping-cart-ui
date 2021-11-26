@@ -21,24 +21,28 @@ const Product = ({ item }) => {
               <div className={styles.price}>
                 <div className={styles.priceCard}>£{item.price}</div>
               </div>
-              <div className={styles.cart}>
-                {isInCart(item) && (
-                  <button onClick={() => increase(item)}>Add more</button>
-                )}
-                {!isInCart(item) && (
-                  <button
-                    className={styles.productButton}
-                    onClick={() => addProduct(item)}
-                  >
-                    {" "}
-                    <AddShoppingCartOutlinedIcon className={styles.cartIcon} />
-                  </button>
-                )}
-              </div>
-              <FavoriteBorderOutlinedIcon className={styles.favorite} />
             </div>
           </a>
         </Link>
+        <div className={styles.cart}>
+          {isInCart(item) && (
+            <button
+              className={styles.productButton}
+              onClick={() => increase(item)}
+            >
+              <AddShoppingCartOutlinedIcon className={styles.cartIcon} />
+            </button>
+          )}
+          {!isInCart(item) && (
+            <button
+              className={styles.productButton}
+              onClick={() => addProduct(item)}
+            >
+              {" "}
+              <AddShoppingCartOutlinedIcon className={styles.cartIcon} />
+            </button>
+          )}
+        </div>
       </div>
     </>
   );
