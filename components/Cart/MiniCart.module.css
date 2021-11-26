@@ -1,0 +1,139 @@
+.container{
+    width: 400px;
+    background: rgb(235,235,235);
+
+    position: absolute;
+    top: 70px;
+    right: 10px;
+    cursor: auto;
+}
+.cartTitle{
+    display: flex;
+    justify-content: center;
+    font-family: 'Poppins', sans-serif;
+}
+
+.cartList table{
+    background: #fff;
+    margin: 0 auto;
+}
+
+.cartTable {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding-bottom: 1.8px;
+    margin-bottom: 1.8px;
+    border-bottom: 1px solid #d8d8d8;
+  }
+  
+  .cartTable td {
+    display: block;
+    flex-wrap: wrap;
+    display: table-cell;
+    padding: 2px 0;
+  }
+  
+  .cartProduct {
+    display: flex;
+    align-items: center;
+  }
+  
+  .productImg {
+    height: 30px;
+    width: 30px;
+    background: #fafafa;
+    border-radius: 100%;
+    margin-right: 5px;
+    margin-left: 5px;
+  }
+  
+  .productImg img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 100%;
+    object-position: top center;
+  }
+  
+  .cartProductContent {
+    padding-right: 25px;
+    text-align: left;
+  }
+  
+  .cartProductContent h3 {
+      align-items: center;
+    width: 190px;
+    font-size: 16px;
+    font-weight: 700;
+    color: #333;
+  }
+  
+  .quantity {
+      padding-right: 10px ;
+      display: inline-flex;   
+      align-items: center;
+
+  }
+  .quantity span{
+      font-size: 18px;
+      color: #000;
+      margin: 0 18px;
+      font-weight: 700;
+      height: 32px;
+  }
+  .quantityButton {
+    border: none;
+    cursor: pointer;
+   outline: none;
+   background: none;
+   border-radius: 0;
+   font-family: "Poppins";
+  }
+  
+  .removeProduct{
+      top: 5px;
+      right: 0;
+      width: auto!important;
+      position: static;
+      color: rgb(3, 168, 124);
+  }
+  
+  .removeIcon{
+      height: 32px;
+      cursor: pointer;
+  }
+
+  .cartDetails{
+      margin:1rem;
+      display: flex;
+      justify-content:space-between;
+  }
+  .cartDetails span{
+      font-size: 16px;
+      font-weight: 600;
+      color: #333;
+  }
+
+  .basketProduct{
+    text-indent: 14px;
+    width: 100%;
+    height: 50px;
+    line-height: 50px;
+    padding: 0px;
+    font-size: 16px;
+    background: rgb(3, 168, 124);
+    color: rgb(255,255,255);
+    border: 0px;
+    text-align: center;
+    text-decoration: none;
+  }
+.basketIcon{
+    width: 24px;
+    height: 30px;
+    display: inline-block;
+    vertical-align: -15%;
+    margin-right: 10px;
+    margin-left: -15px;
+}
