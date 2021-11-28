@@ -18,8 +18,8 @@
   margin-bottom: 0;
 }
 .image img{
-  width: 376px;
-  height: 376px;
+  max-width: 376px;
+  max-height: 376px;
 }
 
 .content{

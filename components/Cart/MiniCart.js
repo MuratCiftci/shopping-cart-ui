@@ -10,15 +10,15 @@ const MiniCart = () => {
     <div className={styles.container}>
       <h3
         className={styles.cartTitle}
-      >{`Alışveriş Sepetim(${cartItems.length})`}</h3>
+      >{`My Cart (${cartItems.length})`}</h3>
       <div className={styles.cartList}>
         {cartItems.length > 0 && (
           <table>
             <tbody>
               {cartItems.map((product) => (
-                <tr className={styles.cartTable}>
+                <tr key={product.id} className={styles.cartTable}>
                   <td>
-                    <Link href="/[product]" as={`${product.id}`}>
+                    <Link href="/[product]" as={`/${product.id}`}>
                       <a>
                         <div className={styles.cartProduct}>
                           <div className={styles.productImg}>
@@ -50,7 +50,7 @@ const MiniCart = () => {
           </table>
         )}
 
-        {cartItems.length === 0 && <p>Sepette bir ürün yok</p>}
+        {cartItems.length === 0 && <p>There is no product in your cart</p>}
       </div>
       <div className={styles.cartDetails}>
         <span>Total Cost</span>

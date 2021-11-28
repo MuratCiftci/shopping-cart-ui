@@ -1,8 +1,7 @@
 import styles from "./Product.module.css";
-import { useCart } from "../../hooks/useCart";
-import FavoriteBorderOutlinedIcon from "@mui/icons-material/FavoriteBorderOutlined";
 import AddShoppingCartOutlinedIcon from "@mui/icons-material/AddShoppingCartOutlined";
 import Link from "next/link";
+import { useCart } from "../../hooks/useCart";
 const Product = ({ item }) => {
   const { addProduct, cartItems, increase } = useCart();
 
@@ -13,7 +12,7 @@ const Product = ({ item }) => {
   return (
     <>
       <div className={styles.container}>
-        <Link href="/[product]" as={`${item.id}`}>
+        <Link href="/[product]" as={`/${item.id}`}>
           <a>
             <img src={item.image} className={styles.image}></img>
             <div className={styles.details}>

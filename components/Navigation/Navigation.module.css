@@ -17,13 +17,16 @@
     margin: 0;
 }
 .menuItem {
+    box-sizing: border-box;
     position: relative;
     color: #646464;
     width: 100%;
     display: block;
-    padding: 15px 22px 15px 22px;
+    padding: 15px 42px 15px 42px;
     font-weight: 600;
     text-align: center;
     line-height: 1.2;
     letter-spacing: -.28px;
 }
+
+

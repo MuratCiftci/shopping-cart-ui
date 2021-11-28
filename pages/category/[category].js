@@ -5,7 +5,6 @@ import { useRouter } from "next/router";
 const index = ({ category }) => {
   const router = useRouter();
   const title = router.query;
-  console.log(title);
   return (
     <div className={styles.containerFluid}>
       <div className={styles.centeredContainer}>
@@ -14,6 +13,7 @@ const index = ({ category }) => {
       </div>
       <div className={styles.Products}>
         {category.map((product) => (
+          
           <Product key={product.id} item={product} />
         ))}
       </div>

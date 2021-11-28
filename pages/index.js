@@ -1,7 +1,7 @@
 import Head from "next/head";
 import styles from "../styles/Home.module.css";
 import Slider from "../components/Slide/Slider";
-import Products from "../components/Products/Products";
+import Products from "../components/ProductList/Products";
 export default function Home({products}) {
   return (
     <div className={styles.container}>

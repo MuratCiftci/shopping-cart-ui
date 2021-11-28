@@ -16,6 +16,7 @@
   font-weight: 700;
   text-align: center;
   padding: 0 0 18px 0;
+  color: rgb(12, 60, 78);
 }
 .titleUnderline {
   border-style: solid;
@@ -25,7 +26,7 @@
   margin-block-start: -31px;
 }
 
-.Products {
+.products {
     padding: 20px;
     display: flex;
     flex-wrap: wrap;
