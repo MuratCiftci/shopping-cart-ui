@@ -1,16 +1,15 @@
 .SearchContainer {
-
-  width: 100%;
-  position: relative;
-  margin: 0 
+  width: 30%;
+  position: absolute;
+  margin: 0 auto;
+  top: 67px;
+  left: 35%;
+  z-index: 99999;
 }
 
-
 .inputContainer {
-
   z-index: 1;
   position: relative;
- 
 }
 
 .searchInput {
@@ -24,7 +23,7 @@
   outline: none;
   transition: all ease 0.3s;
 }
-.searchInput:focus-within{
+.searchInput:focus-within {
   border: 2px solid rgb(3, 168, 124);
   box-shadow: 0 1px 10px 0 rgb(0 0 0 / 10%), 0 3px 10px 0 rgb(0 0 0 / 10%);
   outline: 0;
@@ -75,11 +74,8 @@
   cursor: pointer;
 }
 
-
 .image {
   height: 24px;
   width: 24px;
   margin-right: 20px;
 }
-
-

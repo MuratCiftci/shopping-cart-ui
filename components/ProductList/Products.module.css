@@ -24,11 +24,44 @@
   color: #cadb2f;
   border-radius: 2px;
   margin-block-start: -31px;
+  width: 15%;
+}
+.bestProductsWrapper {
+  position: relative;
+}
+.sliderArrow {
+  width: 50px;
+  height: 100%;
+  background-color: rgb(22, 22, 22, 0.5);
+  color: white;
+  position: absolute;
+  z-index: 99;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  cursor: pointer;
+}
+
+.sliderArrowLeft {
+  left: 0;
+}
+
+.sliderArrowRight {
+  right: 0;
+}
+
+.bestProductsContainer {
+  margin-left: 50px;
+  display: flex;
+  margin-top: 10px;
+  width: max-content;
+  transform: translateX(0px);
+  transition: all 1s ease;
 }
 
 .products {
-    padding: 20px;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
+  margin: 0 8%;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 2fr));
+  grid-gap: 20px;
 }

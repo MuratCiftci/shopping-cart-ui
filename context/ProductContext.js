@@ -1,5 +1,5 @@
 import React, { createContext, useState } from 'react';
-export const ProductsContext = createContext()
+export const ProductsContext = createContext([])
 
 const ProductsContextProvider = (props) => {
     const {value, children} = props

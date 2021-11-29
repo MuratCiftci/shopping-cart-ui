@@ -1,16 +1,17 @@
 .container {
-  width: 100%;
+  width: 100vw;
   display: block;
   position: relative;
 }
 
 .wrapper {
-  width: 1200px;
+  width: 100vw;
   display: block;
   margin: 0 auto;
   position: relative;
 }
 .menu {
+  width: 100vw;
     display: flex;
     position: relative;
     padding:0;

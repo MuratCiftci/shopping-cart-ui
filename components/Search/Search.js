@@ -4,12 +4,10 @@ import { useState, useEffect } from "react";
 
 import { useProducts } from "../../hooks/useProducts";
 
-const Search = () => {
+const Search = ({ products }) => {
   const [filter, setFilter] = useState("");
   const [searchResults, setSearchResults] = useState([]);
-  const products = useProducts().value;
-  console.log(searchResults);
-  console.log(filter);
+
   useEffect(() => {
     const filteredProducts = products.filter(
       (product) =>

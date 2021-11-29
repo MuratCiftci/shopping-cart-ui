@@ -3,7 +3,7 @@ import { CartReducer, sumItems } from "./CartReducer";
 import { useEffect } from "react";
 import { getCookie } from "../lib/useCookie";
 const cart = getCookie("cart");
-export const CartContext = createContext();
+export const CartContext = createContext([]);
 
 
 

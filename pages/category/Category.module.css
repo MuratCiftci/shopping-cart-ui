@@ -1,32 +1,32 @@
 .containerFluid {
-    margin-right: auto;
-    margin-left: auto;
-    padding-left: 15px;
-    padding-right: 15px;
-  }
+  margin-right: auto;
+  margin-left: auto;
+  padding-left: 15px;
+  padding-right: 15px;
+}
 .centeredContainer {
-    font-weight: 700;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-  }
-  .centeredTitle {
-    font-size: 20px;
-    font-weight: 700;
-    text-align: center;
-    padding: 0 0 18px 0;
-  }
-  .titleUnderline {
-    border-style: solid;
-    border-width: 2px 21px;
-    color: #cadb2f;
-    border-radius: 2px;
-    margin-block-start: -31px;
-  }
+  font-weight: 700;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.centeredTitle {
+  font-size: 20px;
+  font-weight: 700;
+  text-align: center;
+  padding: 0 0 18px 0;
+}
+.titleUnderline {
+  border-style: solid;
+  border-width: 2px 21px;
+  color: #cadb2f;
+  border-radius: 2px;
+  margin-block-start: -31px;
+}
 .Products {
-    padding: 20px;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
+  margin: 5% 8%;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 2fr));
+  grid-gap: 20px;
 }

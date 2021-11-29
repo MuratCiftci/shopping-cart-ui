@@ -8,10 +8,8 @@ import { useContext, useState, useEffect } from "react";
 import { getCookie } from "../../lib/useCookie";
 import MiniCart from "../Cart/MiniCart";
 import { useCart } from "../../hooks/useCart";
-import Search from "../Search/Search";
-
 function Navbar() {
-  const { cartItems } = useCart();
+  const { cartItems } = useCart([]);
  
   const [showCart,setShowCart] = useState(false)
 
@@ -27,7 +25,6 @@ function Navbar() {
         </div>
 
         <div className={styles.center}>
-          <Search/>
         </div>
 
         <div className={styles.right}>
