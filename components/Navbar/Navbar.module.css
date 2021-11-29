@@ -24,10 +24,12 @@
   color:rgb(0, 124, 124)
 }
 
-.language {
-  font-size: 14px;
+.hamburgerMenu{
   cursor: pointer;
+  display: none;
 }
+
+
 
 .center {
   flex: 1;
@@ -83,3 +85,61 @@
   flex-direction: row;
   height: 8px;
 }
+
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+.sidenav a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #fff;
+  display: block;
+  transition: 0.3s;
+}
+
+.sidenav a:hover {
+  color: #f1f1f1;
+}
+
+.sidenav {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-direction: column;
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #111;
+  overflow-x: hidden;
+  transition: 1s;
+  padding-top: 60px;
+}
+
+
+@media only screen and (max-width: 768px){
+  .hamburgerMenu  {
+    display: block;
+  } 
+  .menuButton {
+    display: none;
+  }
+  .right {
+    display: none;
+  }
+  .wrapper {
+   padding-left: 8%;
+  }
+  .left{
+    justify-content: flex-end;
+  }
+}
+

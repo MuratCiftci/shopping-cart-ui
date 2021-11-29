@@ -1,6 +1,5 @@
 import styles from "./Navigation.module.css"
 import Link from 'next/link'
-import slug from 'slug'
 function Navigation() {
     return (
         <div className={styles.container}>

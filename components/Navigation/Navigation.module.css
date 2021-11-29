@@ -30,4 +30,9 @@
     letter-spacing: -.28px;
 }
 
+@media only screen and (max-width: 768px){
+  .container  {
+    visibility: hidden;
+  }  
+}
 
