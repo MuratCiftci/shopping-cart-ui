@@ -57,7 +57,7 @@ height: 130px;
 .productButton{
   outline: none;
   border: none;
-  background-color: #fff;
+  background-color: transparent;
 }
 .cartIcon{
   width: 2.5rem !important;
@@ -76,18 +76,19 @@ height: 130px;
   .container{
     width: 150px;
     height: 250px;
-    grid-gap: 0;
+    grid-gap: 40px;
     margin: 20px;
   }
   .image{
     height: 90px;
   }
   .cart{
+    bottom: 70px;
     left: 5rem;
   }
 }
 
-@media only screen and (max-width:375px){
+@media only screen and (max-width:460px){
   .container{
     width: 120px;
     height: 175px;
@@ -114,4 +115,33 @@ height: 130px;
     height: 1.5rem  !important;
   }
 
+}
+@media only screen and (max-width: 320px) {
+  .container{
+    width: 100px;
+    height: 170px;
+    grid-gap: 0;
+    margin: 20px;
+  }
+  .image{
+    height: 60px;
+  }
+  .title{
+    padding-top: 0.6rem;
+    font-size: 10px;
+    height: 60px;
+  }
+  .price{
+    margin-left: 0;
+    font-size: 10px;
+  }
+  .cart{
+    bottom: 20px;
+    left: 2.6rem;
+    z-index: 1;
+  }
+  .cartIcon{
+    width: 1.8rem !important;
+    height: 1.4rem  !important;
+  }
 }

@@ -69,13 +69,18 @@
 @media only screen and (max-width: 595px) {
     .products{
       grid-template-columns: repeat(auto-fit, minmax(150px, 2fr));
-      margin: 0;
+      margin: 20px;
     }
 }
-
-@media only screen and (max-width: 595px) {
+@media only screen and (max-width: 472px) {
   .products{
     grid-template-columns: repeat(auto-fit, minmax(100px, 2fr));
-    margin: 0;
+    margin: 20px;
+  }
+}
+@media only screen and (max-width: 320px) {
+  .products{
+    grid-template-columns: repeat(auto-fit, minmax(80px, 2fr));
+    margin: 20px;
   }
 }
