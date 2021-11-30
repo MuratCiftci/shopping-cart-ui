@@ -4,8 +4,7 @@ import styles from "./Cart.module.css";
 import Link from "next/link";
 import Head from "next/head";
 import KeyboardBackspaceSharpIcon from "@mui/icons-material/KeyboardBackspaceSharp";
-import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
-import LocalShippingIcon from "@mui/icons-material/LocalShipping";
+
 const Cart = () => {
   const { total, cartItems, clearCart, checkout, handleCheckout } = useCart();
   return (
@@ -24,33 +23,36 @@ const Cart = () => {
         <div className={styles.cartIntro}>
           <h3 className={styles.cartTitle}>Shopping Cart</h3>
         </div>
-        {checkout && (
+        {checkout ? (
           <div className={styles.checkout}>
-            <p>Checkout successful</p>
+            <p className={styles.checkoutTitle}>Checkout successful</p>
             <Link href="/" className={styles.backLink}>
               <a>BUY MORE</a>
             </Link>
           </div>
+        ) : (
+          <div className={styles.cartList}>
+            {cartItems.length > 0 && (
+              <table>
+                <tbody>
+                  <tr className={styles.cartTable}>
+                    <th style={{ textAlign: "left" }}>Product</th>
+                    <th>Amount</th>
+                    <th>Price</th>
+                  </tr>
+
+                
+                    {cartItems.map((product) => (
+                      <CartItem product={product} key={product.id} />
+                    ))}
+                 
+                </tbody>
+              </table>
+            )}
+
+            {cartItems.length === 0 && <p>Nothing in the cart</p>}
+          </div>
         )}
-        <div className={styles.cartList}>
-          {cartItems.length > 0 && (
-            <table>
-              <tbody>
-                <tr className={styles.cartTable}>
-                  <th style={{ textAlign: "left" }}>Product</th>
-                  <th>Amount</th>
-                  <th>Price</th>
-                </tr>
-
-                {cartItems.map((product) => (
-                  <CartItem product={product} key={product.id} />
-                ))}
-              </tbody>
-            </table>
-          )}
-
-          {cartItems.length === 0 && <p>Nothing in the cart</p>}
-        </div>
 
         <div className={styles.cartActions}>
           <Link href="/" className={styles.backButton}>
@@ -65,14 +67,14 @@ const Cart = () => {
             </p>
             <button
               type="button"
-              className={styles.checkoutButton}
+              className={styles.actionButton}
               onClick={handleCheckout}
             >
               CHECKOUT
             </button>
             <button
               type="button"
-              className={styles.checkoutButton}
+              className={styles.actionButton}
               onClick={clearCart}
             >
               Clear

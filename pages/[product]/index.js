@@ -1,5 +1,5 @@
 import styles from "./Product.module.css";
-import Link from 'next/link'
+import Link from "next/link";
 import { useCart } from "../../hooks/useCart";
 import ShoppingBagOutlinedIcon from "@mui/icons-material/ShoppingBagOutlined";
 const ProductDetails = ({ data }) => {
@@ -21,25 +21,25 @@ const ProductDetails = ({ data }) => {
             <p className={styles.desc}>{data.description}</p>
           </div>
           <div className={styles.filters}>
-            <button className={styles.basketProduct}>
-            {isInCart(data) && (
-            <button
-              className={styles.basketProduct}
-              onClick={() => increase(data)}
-            >
-              <ShoppingBagOutlinedIcon className={styles.basketIcon} /> <span>Add More to Basket</span>
-            </button>
-          )}
-          {!isInCart(data) && (
-            <button
-              className={styles.basketProduct}
-              onClick={() => addProduct(data)}
-            >
-              {" "}
-              <ShoppingBagOutlinedIcon className={styles.basketIcon} /> <span>Add to Basket</span>
-            </button>
-          )}
-            </button>
+              {isInCart(data) && (
+                <button
+                  className={styles.basketProduct}
+                  onClick={() => increase(data)}
+                >
+                  <ShoppingBagOutlinedIcon className={styles.basketIcon} />{" "}
+                  <span>Add More to Basket</span>
+                </button>
+              )}
+              {!isInCart(data) && (
+                <button
+                  className={styles.basketProduct}
+                  onClick={() => addProduct(data)}
+                >
+                  {" "}
+                  <ShoppingBagOutlinedIcon className={styles.basketIcon} />{" "}
+                  <span>Add to Basket</span>
+                </button>
+              )}
           </div>
         </div>
       </div>
@@ -68,7 +68,7 @@ export async function getStaticProps({ params }) {
 
   return {
     props: {
-      data
+      data,
     },
   };
 }
