@@ -12,7 +12,7 @@ const Footer = () => {
   return (
     <div className={styles.container}>
       <div className={styles.left}>
-        <h1>Shoppy</h1>
+        <h1 className={styles.title}>Shoppy</h1>
         <p className={styles.desc}>
           There are many variations of passages of Lorem Ipsum available, but
           the majority have suffered alteration in some form, by injected
@@ -78,8 +78,8 @@ const Footer = () => {
       <div className={styles.right}>
         <h3 className={styles.title}>Contact</h3>
         <div className={styles.contactItem}>
-          <RoomIcon style={{ marginRight: "10px" }} /> 622 Dixie Path , South
-          Tobinchester 98336
+          <RoomIcon style={{ marginRight: "10px" }} /> 88 Dover Road, South
+          Tobinchester ZE2 4JU
         </div>
         <div className={styles.contactItem}>
           <PhoneIcon style={{ marginRight: "10px" }} /> +1 234 56 78

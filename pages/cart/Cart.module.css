@@ -5,7 +5,7 @@
 
 .container {
   max-width: 1280px;
-  margin : 0 auto;
+  margin: 0 auto;
 }
 
 .cartIntro {
@@ -30,7 +30,7 @@
   padding-right: 60px;
 }
 .cartList {
-  width: 50%;
+  width: 75%;
   margin: 0 auto;
 }
 .cartList table {
@@ -86,15 +86,15 @@
 }
 
 .actionWrapper {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    width: auto;
-    margin-top: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: auto;
+  margin-top: 0;
 }
 
 .totalCost {
-font-size: 24px;
+  font-size: 24px;
   font-weight: 300;
   margin-right: 60px;
   color: #868686;
@@ -106,16 +106,61 @@ font-size: 24px;
   font-weight: 700;
 }
 
-.checkoutButton {
+.actionButton {
   border: none;
   background-color: #fbb03b;
-  color: #000;
+  color: rgb(34, 34, 34);
   cursor: pointer;
   margin-left: 20px;
   font-size: 13px;
   padding: 15px 25px;
   display: inline-block;
   border-radius: 50px;
-  font-weight: 500;
+  font-weight: 600;
   text-transform: uppercase;
+  margin-bottom: 10px;
+}
+
+.checkout {
+  width: 100%;
+  text-align: center;
+}
+
+.checkout a {
+  color: rgb(0, 123, 133);
+  font-weight: 700;
+  font-size: 25px;
+}
+@media only screen and (max-width: 768px) {
+  .cartList {
+    width: 75%;
+  }
+}
+@media only screen and (max-width: 580px) {
+  .cartList {
+    margin: 0 auto;
+    overflow-x: auto;
+    width: 75%;
+  }
+  .cartTable {
+    width: 100%;
+  }
+  
+}
+
+@media only screen and (max-width: 535px) {
+  .cartActions {
+    flex-direction: column;
+  }
+  .actionWrapper {
+    flex-direction: column;
+  }
+  .totalCost {
+    padding: 10px 0;
+    display: block;
+    margin: 0 auto;
+  }
+  .actionButton {
+    margin: 1.5rem;
+  }
 }

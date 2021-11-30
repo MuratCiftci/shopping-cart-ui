@@ -51,38 +51,56 @@
 }
 
 .quantity {
-    border-radius: 50px;
-    height: 38px;
-    padding: 0 20px;
-    display: inline-flex;
-    align-items: center;
-    border: 1px solid #d8d8d8;
-    height: 49px;
+  border-radius: 50px;
+  padding: 0 20px;
+  display: inline-flex;
+  align-items: center;
+  border: 1px solid #d8d8d8;
+  height: 49px;
 }
-.quantity span{
-    font-size: 18px;
-    color: #000;
-    margin: 0 18px;
-    font-weight: 700;
-    height: 32px;
+.quantity span {
+  font-size: 18px;
+  color: #000;
+  margin: 0 18px;
+  font-weight: 700;
+  height: 32px;
 }
 .quantityButton {
   border: none;
   cursor: pointer;
- outline: none;
- background: none;
- border-radius: 0;
- font-family: "Poppins";
+  outline: none;
+  background: none;
+  border-radius: 0;
+  font-family: "Poppins";
 }
 
-.removeProduct{
-    top: 5px;
-    right: 0;
-    width: auto!important;
-    position: static;
+.removeProduct {
+  top: 5px;
+  right: 0;
+  width: auto !important;
+  position: static;
 }
 
-.removeIcon{
-    height: 32px;
-    cursor: pointer;
+.removeIcon {
+  height: 32px;
+  cursor: pointer;
+}
+
+@media only screen and (max-width: 580px) {
+  .cartProduct {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .productImg{
+    height: 40px;
+    width: 40px;
+    margin-right: 0;
+  }
+  .cartProductContent h3 {
+    font-size: 11px;
+  }
+ 
+  .quantity{
+    padding: 0;
+  }
 }

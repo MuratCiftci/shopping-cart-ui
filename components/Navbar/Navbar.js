@@ -10,15 +10,15 @@ function Navbar() {
 
   const [showCart, setShowCart] = useState(false);
   const [sideBar, setsideBar] = useState(false);
-  const [menuWidth, setMenuWidth] = useState('0');
+  const [menuPosition, setMenuPosition] = useState("-50%");
 
   function toggleShowMenu() {
     // open or close
     setsideBar(!sideBar);
-    if(sideBar){
-      setMenuWidth('40%');
-    }else{
-      setMenuWidth("0");
+    if (sideBar) {
+      setMenuPosition("-50%");
+    } else {
+      setMenuPosition("0");
     }
   }
 
@@ -30,15 +30,31 @@ function Navbar() {
           className={styles.hamburgerMenu}
         >
           <MenuIcon />
-          
-            <div style={{width: menuWidth}} className={styles.sidenav}>
-              <a className={styles.closebtn}   onClick={() => toggleShowMenu()}> &times;</a>
-              <a href="#">About</a>
-              <a href="#">Services</a>
-              <a href="#">Clients</a>
-              <a href="#">Contact</a>
+
+          <div style={{ left: menuPosition }} className={styles.sidenav}>
+            <a className={styles.closebtn} onClick={() => toggleShowMenu()}>
+              {" "}
+              &times;
+            </a>
+            <div className={styles.content}>
+              <Link href="/category/[category]" as={"/category/electronics"}>
+               Electronics
+              </Link>
+              <Link href="/category/[category]" as={"/category/jewelery"}>
+                Jewelry
+              </Link>
+              <Link href="/category/[category]" as={"/category/men's clothing"}>
+                Men's Fashion
+              </Link>
+              <Link
+                href="/category/[category]"
+                as={"/category/women's clothing"}
+              >
+                Women's Fashion
+              </Link>
+              <Link href="/cart">My Cart</Link>
             </div>
-   
+          </div>
         </button>
 
         <div className={styles.left}>

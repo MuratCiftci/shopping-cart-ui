@@ -68,3 +68,26 @@
   margin-right: 10px;
   margin-left: -15px;
 }
+@media only screen and (max-width:1024px){
+  .wrapper{
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .info{
+    margin: 0 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  .title{
+    text-align: center;
+   width: 100%;
+  }
+  .desc{
+    text-align: center;
+   width: 100%;
+  }
+}
+

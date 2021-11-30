@@ -64,4 +64,18 @@
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 2fr));
   grid-gap: 20px;
+  justify-items: center;
+}
+@media only screen and (max-width: 595px) {
+    .products{
+      grid-template-columns: repeat(auto-fit, minmax(150px, 2fr));
+      margin: 0;
+    }
+}
+
+@media only screen and (max-width: 595px) {
+  .products{
+    grid-template-columns: repeat(auto-fit, minmax(100px, 2fr));
+    margin: 0;
+  }
 }
