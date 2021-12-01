@@ -1,5 +1,16 @@
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
+[Demo](https://shopping-cart-ui-blue.vercel.app/)
+
+![Demo](https://media.giphy.com/media/FP6WfZFX5nbo9irfep/giphy.gif)
+
+## Techs
+React
+
+Next.js(Static Generation)
+
+Context API
+
 ## Getting Started
 
 First, run the development server:
